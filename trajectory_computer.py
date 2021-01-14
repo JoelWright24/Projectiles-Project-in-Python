@@ -109,13 +109,13 @@ def target():
                 print ("We Hit The Target!")
                 print ("Initial Speed       :{:.3f}".format(solution.x[0]))
                 print ("Initial Angle       :{:.2f}".format(solution.x[1]))
-                print ("Closest distnace    :{:.1e}".format(solution.fun))
+                print ("Closest distance    :{:.1e}".format(solution.fun))
                 #What is the kinetic energy required?
                 Kinietic_Energy=0.5*MASS*(solution.x[0]**2) 
-                print ("The kinietic Energy require is: {:.1f}kJ".format(Kinietic_Energy/1000))
+                print ("The kinetic Energy require is: {:.1f}kJ".format(Kinietic_Energy/1000))
                 # gunpowder has 3000 joules per gram
                 Gunpowder_mass=Kinietic_Energy/3000000
-                print ("Which is the equivilent to the use of around {:.3f}kg of gunpowder.".format(Gunpowder_mass))
+                print ("Which is the equivalent to the use of around {:.3f}kg of gunpowder.".format(Gunpowder_mass))
                
                 YesOrNo = input("Do you require an image of the flight? [y/n]: ")
                 if (YesOrNo=="y"):
