@@ -19,17 +19,17 @@ def target():
                         print("Positive distance please...")
                         ValueError
                 except ValueError:
-                    print("A valid distnace required. Please Try again...")
+                    print("A valid distance required. Please Try again...")
         while True:
                 try:
                     Target_y=float(input("Enter the height of the target in m: "))
                     if (0<Target_y):
                         break
                     else:
-                        print("Positive distance please...")
+                        print("Positive height please...")
                         ValueError
                 except ValueError:
-                    print("A valid distnace required. Please Try again...") 
+                    print("A valid height required. Please Try again...")
         while True:
                 try:
                     MASS=float(input("Enter the mass of the projectile in kg: "))
@@ -39,24 +39,24 @@ def target():
                         print("Positive mass please...")
                         ValueError
                 except ValueError:
-                    print("A valid distnace required. Please Try again...")            
+                    print("A valid mass required. Please Try again...")
         while True:
                 try:
-                    STARTING_HEIGHT=float(input("Enter the starting hight of the projectile above ground in m: "))
+                    STARTING_HEIGHT=float(input("Enter the starting height of the projectile above ground in m: "))
                     if (0<=STARTING_HEIGHT):
                         break
                     else:
-                        print("Positive Height please...")
+                        print("Positive height please...")
                         ValueError
                 except ValueError:
-                    print("A valid distnace required. Please Try again...")
+                    print("A valid height required. Please Try again...")
         while True:
                 try:
-                    DRAG_COEFFICIENT=float(input("Enter the drag coefficiant of the projectile: "))
+                    DRAG_COEFFICIENT=float(input("Enter the drag coefficient of the projectile: "))
                     if (0<DRAG_COEFFICIENT<1):
                         break
                     else:
-                        print("Please give a coefeeiciant in the range of 0 and 1...")
+                        print("Please give a coefficient in the range of 0 and 1...")
                         ValueError
                 except ValueError:
                     print("A valid number between 0 and 1 required. Please Try again...")
@@ -109,13 +109,13 @@ def target():
                 print ("We Hit The Target!")
                 print ("Initial Speed       :{:.3f}".format(solution.x[0]))
                 print ("Initial Angle       :{:.2f}".format(solution.x[1]))
-                print ("Closest distnace    :{:.1e}".format(solution.fun))
+                print ("Closest distance    :{:.1e}".format(solution.fun))
                 #What is the kinetic energy required?
                 Kinietic_Energy=0.5*MASS*(solution.x[0]**2) 
-                print ("The kinietic Energy require is: {:.1f}kJ".format(Kinietic_Energy/1000))
+                print ("The kinetic Energy require is: {:.1f}kJ".format(Kinietic_Energy/1000))
                 # gunpowder has 3000 joules per gram
                 Gunpowder_mass=Kinietic_Energy/3000000
-                print ("Which is the equivilent to the use of around {:.3f}kg of gunpowder.".format(Gunpowder_mass))
+                print ("Which is the equivalent to the use of around {:.3f}kg of gunpowder.".format(Gunpowder_mass))
                
                 YesOrNo = input("Do you require an image of the flight? [y/n]: ")
                 if (YesOrNo=="y"):
